@@ -85,16 +85,30 @@ WSGI_APPLICATION = 'condominio.wsgi.application'
 #     }
 # }
 
+# DATABASES = {
+#     "default": {
+#         "ENGINE": "django.db.backends.postgresql",
+#         "NAME": "condominio",
+#         "USER": "postgres",
+#         "PASSWORD": "admin",
+#         "HOST": "localhost",
+#         "PORT": "5432",
+#     }
+# }
+
 DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.postgresql",
-        "NAME": "condominio",
-        "USER": "postgres",
-        "PASSWORD": "admin",
-        "HOST": "localhost",
+        "NAME": "condominio_rv3u",
+        "USER": "condominio_rv3u_user",
+        "PASSWORD": "xANCrzatDxWxwTayYLqGth8ILwH9tc45",
+        "HOST": "dpg-d33m1u2dbo4c73bb2s7g-a.oregon-postgres.render.com",
         "PORT": "5432",
+        "OPTIONS": {"sslmode": "require"},
     }
 }
+
+
 
 # Password validation
 # https://docs.djangoproject.com/en/5.1/ref/settings/#auth-password-validators
