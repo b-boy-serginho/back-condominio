@@ -1,0 +1,24 @@
+databases:
+  - name: condominio_db  
+    plan: free
+    databaseName: condominio_rv3u
+    user: condominio_rv3u_user
+    password: xANCrzatDxWxwTayYLqGth8ILwH9tc45
+    host: dpg-d33m1u2dbo4c73bb2s7g-a.oregon-postgres.render.com
+    port: 5432
+    sslmode: require
+
+services:
+  - type: web
+    plan: free
+    name: condominio
+    runtime: python
+    buildCommand: './build.sh'
+    startCommand: 'gunicorn condominio.wsgi:application'
+    envVars:
+      - key: DATABASE_URL
+        value: postgresql://condominio_rv3u_user:xANCrzatDxWxwTayYLqGth8ILwH9tc45@dpg-d33m1u2dbo4c73bb2s7g-a.oregon-postgres.render.com:5432/condominio_rv3u
+      - key: SECRET_KEY
+        generateValue: true
+      - key: WEB_CONCURRENCY
+        value: 4
