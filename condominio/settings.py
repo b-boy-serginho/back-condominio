@@ -29,7 +29,7 @@ SECRET_KEY = 'django-insecure-av29%!7r3a9=ht70r8!=#pv2mz9okm%g%51gfds!&8#5x#tus5
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1', 'localhost', '192.168.100.7', '10.50.92.160', 'https://back-condominio-1.onrender.com']
+ALLOWED_HOSTS = ['127.0.0.1', 'localhost', '192.168.100.7', '10.50.92.160', 'back-condominio-1.onrender.com']
 
 
 # Application definition
