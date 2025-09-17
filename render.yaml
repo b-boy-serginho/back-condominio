@@ -11,7 +11,7 @@ databases:
 services:
   - type: web
     plan: free
-    name: back-condominio-3
+    name: back-condominio-1
     runtime: python
     buildCommand: './build.sh'
     startCommand: 'gunicorn condominio.wsgi:application'
