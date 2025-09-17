@@ -1,5 +1,5 @@
 databases:
-  - name: condominio_db  
+  - name: si2  
     plan: free
     databaseName: condominio_rv3u
     user: condominio_rv3u_user
@@ -11,7 +11,7 @@ databases:
 services:
   - type: web
     plan: free
-    name: condominio
+    name: back-condominio-3
     runtime: python
     buildCommand: './build.sh'
     startCommand: 'gunicorn condominio.wsgi:application'
